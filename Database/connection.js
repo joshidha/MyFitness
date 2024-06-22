@@ -1,7 +1,8 @@
 const mongoose=require('mongoose');
+const mongoUri=process.env.MONGOURI;
 const connection=async()=>{
     try{
-        const con=await mongoose.connect("mongodb+srv://dharmenderjoshics2017pgdav:Dheeraj22@cluster0.qkl5sy9.mongodb.net/");
+        const con=await mongoose.connect(mongoUri);
         console.log(`connection established with database`);
     }
     catch(err){
